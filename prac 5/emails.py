@@ -1,8 +1,7 @@
 emails = ["lindsay.ward@jcu.edu.au", "abe@gmail.com"]
 names = ["Lindsay Ward", "Abe"]
-database = {"lindsay.ward@jcu.edu.au":"Lindsay Ward", "abe@gmail.com":"Abe"}
+database = {"lindsay.ward@jcu.edu.au": "Lindsay Ward", "abe@gmail.com": "Abe"}
 email = input("Email: ")
-
 
 program_started = 1
 

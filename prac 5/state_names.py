@@ -17,12 +17,12 @@ while state_code != "":
     else:
         print("Invalid short state")
     state_code = input("Enter short state: ")
-    
+
 code = []
 state = []
 state_no = 0
 for i in CODE_TO_NAME:
     code.append(i)
     state.append(CODE_TO_NAME[i])
-    print("{:3} is {}".format(code[state_no],state[state_no]))
+    print("{:3} is {}".format(code[state_no], state[state_no]))
     state_no += 1

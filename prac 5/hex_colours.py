@@ -15,4 +15,4 @@ if user_colour not in COLOUR_CODEX:
 
 else:
     hex_colour = COLOUR_CODEX[user_colour]
-    print("Colour code for {} is {}".format(user_colour,hex_colour))
+    print("Colour code for {} is {}".format(user_colour, hex_colour))
