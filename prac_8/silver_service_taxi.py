@@ -1,4 +1,5 @@
 from prac_8.taxi import Taxi
+from decimal import Decimal
 
 
 class SilverServiceTaxi(Taxi):
@@ -15,7 +16,8 @@ class SilverServiceTaxi(Taxi):
         return "{}, plus flagfall of ${:.2f}, total ${}".format(super().__str__(), self.flagfall, self.get_fare())
 
     def get_fare(self):
-        return (super().get_fare()) + self.flagfall
+        price = super().get_fare() + self.flagfall
+        return ("{:.2f}".format(price))
 
     def start_fare(self):
         self.current_fare_distance = 0
