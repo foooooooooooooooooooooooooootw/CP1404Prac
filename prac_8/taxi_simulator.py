@@ -3,8 +3,8 @@ from prac_8.silver_service_taxi import SilverServiceTaxi
 
 taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
 
-def main():
 
+def main():
     program_started = 1
     choice = input("q)uit, c)hoose taxi, d)rive" + "\n" + ">>> ")
     current_taxi = None
@@ -42,7 +42,6 @@ def main():
             print("Your {} trip cost you ${}".format(taxis[current_taxi].name, taxis[current_taxi].get_fare()))
             print("Bill to date: ${:.2f}".format(total_bill))
             choice = input("q)uit, c)hoose taxi, d)rive" + "\n" + ">>> ")
-
 
 
 main()
