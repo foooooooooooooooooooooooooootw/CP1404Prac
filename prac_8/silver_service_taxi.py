@@ -1,5 +1,4 @@
 from prac_8.taxi import Taxi
-from decimal import Decimal
 
 
 class SilverServiceTaxi(Taxi):
