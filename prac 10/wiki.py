@@ -1,4 +1,5 @@
 import wikipedia
+import textwrap
 
 def main():
     program_started = 1
@@ -11,7 +12,10 @@ def main():
         elif choice.upper() == "P":
             try:
                 page = input("What page would you like the summary for?" + "\n" + ">>> ")
-                print(wikipedia.summary(page))
+                full_page = wikipedia.page(page)
+                print("\n")
+                print("{} ({}) \n\n".format(full_page.title, full_page.url))
+                print(textwrap.fill(wikipedia.summary(page), 50) + "\n\n")
             except wikipedia.exceptions.DisambiguationError as e:
                 print("Did you mean:")
                 for i in range(len(e.options)):
