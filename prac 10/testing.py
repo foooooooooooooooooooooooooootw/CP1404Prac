@@ -72,3 +72,12 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+def sentencer():
+    pass
+
+
+
+assert sentencer()[0].isupper()
+assert sentencer()[-1] == "."
+assert sentencer().strip(".").isdigit() == False
