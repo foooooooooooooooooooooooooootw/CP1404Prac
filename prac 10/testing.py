@@ -73,11 +73,22 @@ doctest.testmod()
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
 
-def sentencer():
-    pass
+def sentencer(phrase):
+    sentence = phrase.split(' ', 1)
+    if phrase[0].isdigit():
+        pass
+    elif len(sentence) == 1:
+        new_phrase = phrase.title()
+    else:
+        first_word = sentence[0]
+        rest = sentence[1]
+        new_phrase = first_word.title() + " " + rest
+    if not new_phrase[-1] == ".":
+        new_phrase = new_phrase + "."
+
+    return new_phrase
 
 
-
-assert sentencer()[0].isupper()
-assert sentencer()[-1] == "."
-assert sentencer().strip(".").isdigit() == False
+assert sentencer("hello") == "Hello."
+assert sentencer("It is an ex parrot.") == "It is an ex parrot."
+assert sentencer("madam i'm adam") == "Madam i'm adam."
