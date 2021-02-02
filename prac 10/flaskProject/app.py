@@ -6,6 +6,11 @@ app = Flask(__name__)
 def hello_world():
     return '<h1>Hello World :)</h1>'
 
+@app.route('/greet')
+@app.route('/greet/<name>')
+def greet(name="FTW"):
+    return "Hello {}".format(name)
+
 
 if __name__ == '__main__':
     app.run()
