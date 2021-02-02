@@ -11,6 +11,10 @@ def hello_world():
 def greet(name="FTW"):
     return "Hello {}".format(name)
 
+@app.route('/CtF/<celsius>')
+def convert(celsius=0.0):
+    fahrenheit = float(celsius) * 9.0 / 5 + 32
+    return str(fahrenheit)
 
 if __name__ == '__main__':
     app.run()
